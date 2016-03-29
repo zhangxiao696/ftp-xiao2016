@@ -11,4 +11,6 @@
 void handle_child(session_t *sess);
 //int list_common(void);
 
+void ftp_reply(session_t *sess, int cmd_rules, const char *str);
+
 #endif /*_SERVICE_PROCESS_H*/

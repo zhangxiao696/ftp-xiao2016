@@ -95,11 +95,6 @@ char priv_sock_get_result(int fd)
 	char res;
 	int ret;
 	ret = readn(fd, &res, sizeof(res));
-	if(ret == 0)
-	{
-		printf("b ftp process exit\n");
-		exit(EXIT_FAILURE);
-	}
 	if(ret != sizeof(res))
 	{
 		printf("priv_sock_get_cmd_error\n");

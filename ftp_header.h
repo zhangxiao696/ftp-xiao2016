@@ -19,6 +19,11 @@
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <dirent.h>
+#include <sys/sendfile.h>
+ #include <sys/wait.h>
+
+#include <linux/capability.h>
+#include <sys/syscall.h>
 
 #include <net/if.h>
 #include <sys/ioctl.h>

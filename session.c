@@ -14,9 +14,11 @@ void begin_session(session_t *sess)
 	if(seteuid(pw->pw_uid) < 0)
 		ERR_EXIT("seteuid");*/
 
-	int sockfds[2];
+/*	int sockfds[2];
 	if(socketpair(PF_UNIX, SOCK_STREAM, 0, sockfds) < 0)
-		ERR_EXIT("sockpair");
+		ERR_EXIT("sockpair");*/
+
+	active_oobinline(sess->ctrl_fd);
 
     priv_sock_init(sess);
 

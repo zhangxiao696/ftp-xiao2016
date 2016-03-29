@@ -2,7 +2,8 @@
 CC=gcc
 CFLAGS=-Wall -g
 BIN=my_ftp
-OBJS=main.o socket_operate.o session.o service_process.o worker_process.o string_operate.o parameter.o para_operate.o internal_sock.o
+OBJS=main.o socket_operate.o session.o service_process.o worker_process.o string_operate.o \
+parameter.o para_operate.o internal_sock.o hash.o
 LIBS=-lcrypt
 
 $(BIN):$(OBJS)
